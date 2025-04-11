@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+
+body {
+    font-family: 'Tektur';
+    background-image: url("bg-image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
