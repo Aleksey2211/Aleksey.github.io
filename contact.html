@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+
+{% block image %}
+body { background-image: url("static/images/newstl.jpg"); }
+{% endblock %}
+
+
+{% block content %}
+<h3 class="mt-10 pt-0 text-center"><i class="fa-solid fa-location-dot"></i><strong> Санкт-Петербург</strong></h3>
+<h3 class="mt-4 pt-0 text-center"><strong>Дворцовая площадь, прямо по центру</strong></h3>
+<h3 class="mt-4 pt-3 text-center"><i class="fa-solid fa-phone"></i><strong> Телефон: 8911-990-01-28</strong></h3>
+<h3 class="mt-4 pt-3 text-center"><i class="fa-solid fa-envelope"></i><strong> @mail: sautospb@mail.ru</strong></h3>
+<h3 class="mt-4 pt-3 text-center"><i class="fa-brands fa-telegram"></i><strong> Telegram: @sautospb</strong></h3>
+<h5 class="mt-4 pt-5 text-center"><i class="fa-solid fa-clock"></i><strong> Часы работы:Пн-пт;10.00-19.00</strong></h5>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <style>
+        .map-container {
+            display: flex;
+            justify-content: center; /* Центрирование по горизонтали */
+        }
+
+        #map {
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+<!--    <h1>Динамическая Яндекс Карта</h1>-->
+    <div id="map"></div>
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [59.906463, 30.364422], // Координаты офиса (СПБ)
+                zoom: 10
+            });
+
+            // Добавление метки на карту
+            var myPlacemark = new ymaps.Placemark([59.906463, 30.364422], {
+                hintContent: 'СПБ!',
+                balloonContent: 'Набережная Реки Волковки 9, офис 306!'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+<h5 class="mt-4 pt-5 text-center"></i><strong></strong></h5>
+<h5 class="mt-4 pt-5 text-center"></i><strong></strong></h5>
+
+
+<!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            display: flex;-->
+<!--            justify-content: flex-end; /* Выравнивание содержимого вправо */-->
+<!--            margin: 0;-->
+<!--            height: 100vh; /* Высота окна браузера */-->
+<!--        }-->
+<!--        #map {-->
+<!--            width: 1000px; /* Ширина карты */-->
+<!--            height: 70%; /* Высота карты на всю высоту экрана */-->
+<!--        }-->
+<!--    </style>-->
+<!--    <h1 style="position: absolute; top: 20px; left: 20px;">Динамическая Яндекс Карта</h1>-->
+<!--    <div id="map"></div>-->
+
+<!--    <script type="text/javascript">-->
+<!--        ymaps.ready(init);-->
+<!--        function init() {-->
+<!--            var myMap = new ymaps.Map("map", {-->
+<!--                center: [55.76, 37.64], // Координаты центра карты (Москва)-->
+<!--                zoom: 10-->
+<!--            });-->
+
+<!--            // Добавление метки на карту-->
+<!--            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {-->
+<!--                hintContent: 'Москва!',-->
+<!--                balloonContent: 'Это Москва!'-->
+<!--            });-->
+
+<!--            myMap.geoObjects.add(myPlacemark);-->
+<!--        }-->
+<!--    </script>-->
+{% endblock %}
